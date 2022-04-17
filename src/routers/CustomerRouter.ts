@@ -5,6 +5,7 @@ import deleteCunstomerController from "../useCases/Cunstomer/DeleteCunstomer/ind
 import findOneCunstomerController from "../useCases/Cunstomer/FindCunstomer/index";
 import UpdateCunstomerController from "../useCases/Cunstomer/UpdateCunstomer/index";
 import findByCpfCunstomerController from "../useCases/Cunstomer/FindByCpfCunstomer/index";
+import searchCunstomerController from "../useCases/Cunstomer/SearchCunstomer/index";
 
 const cunstomerRouter = express.Router()
 
@@ -23,6 +24,10 @@ cunstomerRouter.get('/customer/:id',  (request, response) => {
 
 cunstomerRouter.get('/customer/cpf/:cpf',  (request, response) => {
     return findByCpfCunstomerController.handle(request, response);
+});
+
+cunstomerRouter.get('/customer/search/:text',  (request, response) => {
+    return searchCunstomerController.handle(request, response);
 });
 
 cunstomerRouter.delete('/customer/:id',  (request, response) => {
