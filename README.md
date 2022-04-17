@@ -74,5 +74,5 @@ For  anywhere other request, put in headrs the Key Authorization with the Token 
 
 - Delete:http://localhost:3333/customer/{id}
 
-<p>route to delete customer</p>
+<p>Route to delete customer</p>
 <p>{id} is id created by mongodb</p>
