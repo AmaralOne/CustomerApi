@@ -1,8 +1,6 @@
 
 
 export class Customer{
-    public readonly id: string
-
     public name: string
     public email: string
     public cpf: string
@@ -11,7 +9,7 @@ export class Customer{
     public cidade: string
     public estado: string
 
-    constructor(props: Omit<Customer, 'id'>, id?: string){
+    constructor(props: Customer){
         this.name = props.name
         this.email = props.email
         this.cpf = props.cpf

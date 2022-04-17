@@ -1,6 +1,6 @@
 import { Customer } from "../../../entities/Customer";
 import { ISearch } from "../../../repositories/interfaces/ISearch";
-import { IRead } from "../../../repositories/interfaces/IRead";
+
 
 
 export default class SearchCunstomerUseCase{

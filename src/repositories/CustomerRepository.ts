@@ -5,6 +5,7 @@ import { fomartString } from "../tools/formatString";
 import { ISearch } from "./interfaces/ISearch";
 
 export class CustomerRepository  extends BaseRepositoryMongo<Customer> implements FindCustormByCpf, ISearch<Customer> {
+    
     async findbyCpf(id: string): Promise<Customer> {
         try {
             return await this._collections.findOne({ cpf: id });
@@ -50,6 +51,12 @@ export class CustomerRepository  extends BaseRepositoryMongo<Customer> implement
                 },
                 {
                     estado: {
+                        '$regex': regexValue,
+                        '$options': 'im'
+                    }
+                },
+                {
+                    endereco: {
                         '$regex': regexValue,
                         '$options': 'im'
                     }

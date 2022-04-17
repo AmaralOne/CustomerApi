@@ -1,11 +1,10 @@
 //import all interfaces
 import { IWriter } from "../interfaces/IWrite";
 import { IRead } from "../interfaces/IRead";
+
+//import mongoose
 import { model, Schema, Model, Document } from 'mongoose';
 
-//we imported all types from mongodb driver, to use in code 
-import { MongoClient, Db, Collection} from 'mongodb';
-import { Customer } from "../../entities/Customer";
 
 //that class only can be extended
 export abstract class BaseRepositoryMongo<T> implements IWriter<T>, IRead<T> {
@@ -22,10 +21,6 @@ export abstract class BaseRepositoryMongo<T> implements IWriter<T>, IRead<T> {
     async findAll(): Promise<T[]> {
         return await this._collections.find({});
     }
-    find(item: T): Promise<T[]> {
-        throw new Error("Method not implemented.");
-    }
-
     
     async findOne(id: string): Promise<T> {
         try {

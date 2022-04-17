@@ -1,21 +1,21 @@
 import express from 'express';
 import cunstomerRouter from './routers/CustomerRouter'
 
-
-
+//start Express
 const app = express();
 
+//Configure json in Express
 app.use(express.json());
 
-// Rotas
+// Routes
 app.use('', cunstomerRouter)
 
-// Endpoint raiz
+// Root Endpoint
 app.get('/', (req, res) => {
-    res.send('Bem-vindo!')
+    res.send('Welcome!')
 })
 
-// Resposta padrão para quaisquer outras requisições:
+// Default response for any other requests:
 app.use((req, res) => {
     res.status(404)
 })

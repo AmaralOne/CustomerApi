@@ -1,5 +1,4 @@
 import { CustomerRepository } from "../../../repositories/CustomerRepository";
-import  {Connection} from "../../../providers/conection";
 import { FindCunstomerController } from "./FindCunstomerController";
 import FindCunstomerUseCase from "./FindCunstomerUseCase";
 import customerModel from "../../../model/customer";

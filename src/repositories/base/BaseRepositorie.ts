@@ -21,10 +21,6 @@ export abstract class BaseRepository<T> implements IWriter<T>, IRead<T> {
     findAll(): Promise<T[]> {
         throw new Error("Method not implemented.");
     }
-    find(item: T): Promise<T[]> {
-        throw new Error("Method not implemented.");
-    }
-
     
     findOne(id: string): Promise<T> {
         throw new Error("Method not implemented.");

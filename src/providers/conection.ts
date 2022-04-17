@@ -1,24 +1,19 @@
-import { Db, MongoClient } from "mongodb";
+import mongoose from "mongoose";
+
 export class Connection
 {
-    private static _db: Db;
 
+    static   getConectionData(): boolean {
+        mongoose.connect('mongodb://localhost:27017/test').then(function (connection) {
+            console.log(`Connected with database`)
+            
+        }).catch(function (error) {
+            console.log(`Erro ${error.message}`)
+            return false
+        });
 
-    static isInitialized(): boolean {
-        return this._db !== undefined;
+        return true
       }
-
-
-    static async getConection(): Promise<Db> {
-        if (this.isInitialized()) return this._db;
-    
-        console.log('Connected antes')
-        // Initialize the connection.
-        const connection = await MongoClient.connect('mongodb://localhost');
-        this._db = connection.db('Teste');
-        console.log('Connected to')
-        return this._db;
-    }
 
 }
 

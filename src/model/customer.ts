@@ -8,7 +8,8 @@ const CustomerSchema: Schema = new Schema({
     cpf: { type: String, required: true },
     telefone: { type: String, required: true },
     cidade: { type: String, required: true },
-    estado: { type: String, required: true }
+    estado: { type: String, required: true },
+    endereco: { type: String, required: true }
 });
 
 

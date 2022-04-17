@@ -7,7 +7,6 @@ export class FindCunstomerController{
 
         }
     async handle(request: Request, response: Response):Promise<Response>{
-        const {name, email, cpf, telefone, endereco, cidade, estado} = request.body
         try{
             const result = await this.findCunstomeUseCase.execute()
             return response.status(201).send(result);

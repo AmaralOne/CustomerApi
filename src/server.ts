@@ -1,18 +1,18 @@
 import { app } from "./app";
-import mongoose from "mongoose";
+import {Connection} from "./providers/conection"
 
-mongoose.connect('mongodb://localhost:27017/test').then(function (connection) {
-    console.log(`Conectou com o Banco de Dados`)
-}).catch(function (error) {
-    console.log(`Erro ${error.message}`)
-});
-
-// Porta do servidor
+// Server Port
 const PORT = process.env.PORT || 3333
-// Host do servidor
+// Server Host
 const HOSTNAME = process.env.HOSTNAME || 'http://localhost'
 
-// Inicia o sevidor
+//Connect with database
+Connection.getConectionData()
+
+//Start server
 app.listen(PORT, () => {
-    console.log(`Servidor rodando com sucesso ${HOSTNAME}:${PORT}`)
+    console.log(`Server started with success ${HOSTNAME}:${PORT}`)
 })
+
+
+

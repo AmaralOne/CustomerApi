@@ -3,7 +3,7 @@ import { FindCustormByCpf } from "../../../repositories/interfaces/IFindCpf";
 import { IRead } from "../../../repositories/interfaces/IRead";
 
 
-export default class FindCunstomerUseCase{
+export default class FindByCpfCunstomerUseCase{
 
     private ReadRepository: FindCustormByCpf;
 
@@ -19,7 +19,7 @@ export default class FindCunstomerUseCase{
         const customer = await this.ReadRepository.findbyCpf(id);
         
         if(customer===null){
-            throw new Error("Not found record with id:"+id)
+            throw new Error("Not found record with cpf:"+id)
         }
 
         return customer;
