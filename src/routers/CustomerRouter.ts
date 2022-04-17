@@ -6,8 +6,11 @@ import findOneCunstomerController from "../useCases/Cunstomer/FindCunstomer/inde
 import UpdateCunstomerController from "../useCases/Cunstomer/UpdateCunstomer/index";
 import findByCpfCunstomerController from "../useCases/Cunstomer/FindByCpfCunstomer/index";
 import searchCunstomerController from "../useCases/Cunstomer/SearchCunstomer/index";
+import authMidddleware  from '../middlewares/auth'
 
-const cunstomerRouter = express.Router()
+const cunstomerRouter = express.Router();
+
+cunstomerRouter.use(authMidddleware);
 
 //route to create customer
 cunstomerRouter.post('/customer',  (request, response) => {

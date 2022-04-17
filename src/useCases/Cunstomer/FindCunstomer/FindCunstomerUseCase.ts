@@ -15,7 +15,7 @@ export default class FindCunstomerUseCase{
     async  execute(id: string): Promise<Customer> {
         
             
-        const customer = await this.ReadRepository.findOne(id);
+        const customer = await this.ReadRepository.findOneById(id);
         
         if(customer===null){
             throw new Error("Not found record with id:"+id)

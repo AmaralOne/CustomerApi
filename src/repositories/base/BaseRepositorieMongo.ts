@@ -18,18 +18,17 @@ export abstract class BaseRepositoryMongo<T> implements IWriter<T>, IRead<T> {
     constructor(model:Model<T>){
         this._collections = model
     }
-    async findAll(): Promise<T[]> {
-        return await this._collections.find({});
-    }
-    
-    async findOne(id: string): Promise<T> {
+    async findOneById(id: string): Promise<T> {
         try {
             return await this._collections.findById({ _id: id });
         }catch (e) {
             throw new Error("Not found record with id: " + id);
         }
-        
     }
+    async findAll(): Promise<T[]> {
+        return await this._collections.find({});
+    }
+    
     async create(item: T): Promise<boolean> {
 
         const res = await this._collections.create(item)

@@ -19,7 +19,7 @@ export default class UpdateCunstomerUseCase{
 
     async  execute(id: string,data:IUpdateCunstomerRequestDTO): Promise<boolean> {
         
-        const customerOld = await this.ReadRepository.findOne(id);
+        const customerOld = await this.ReadRepository.findOneById(id);
 
         if(customerOld===null){
             throw new Error("Not found record with id:"+id)
