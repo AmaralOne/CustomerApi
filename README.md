@@ -28,27 +28,27 @@ For  anywhere other request, put in headrs the Key Authorization with the Token 
 
 - Get: http://localhost:3333/customer/search/{text}
 
-* Route to search customer by free text search across all customer fields
-* {text} is free text utilized to search across all customer fields
+<p>Route to search customer by free text search across all customer fields</p>
+<p>{text} is free text utilized to search across all customer fields</p>
 
 - Get: http://localhost:3333/customer/{id}
 
-* Route to find customer by id  of mongodb
-* {id} is id created by mongodb
+<p>Route to find customer by id  of mongodb</p>
+<p>{id} is id created by mongodb</p>
 
 - Get: http://localhost:3333/customer/cpf/{cpf}
 
-* Route to find customer by cpf
-* {cpf} is cpf of customer
+<p>Route to find customer by cpf</p>
+<p> {cpf} is cpf of customer</p>
 
 - Get: http://localhost:3333/customers
 
-* Route to list customer
+<p>Route to list customer</p>
 
 - Post:http://localhost:3333/customers
 
--> Route to create customer
--> json example: {
+<p>Route to create customer</p>
+<p>json example: {
     "name": "Joao figueredo da Silva",
     "email": "joaofigueredo@gmail.com",
     "cpf": "111111111",
@@ -56,13 +56,13 @@ For  anywhere other request, put in headrs the Key Authorization with the Token 
     "cidade": "Itaberaí",
     "estado": "São Paulo",
     "endereco": "teste"
-}
+}</p>
 
 - Put:http://localhost:3333/customer/{id}
 
--> route to update customer
--> {id} is id created by mongodb
--> json example: {
+<p>Route to update customer</p>
+<p>{id} is id created by mongodb</p>
+<p>json example: {
     "name": "Joao figueredo da Silva",
     "email": "joaofigueredo@gmail.com",
     "cpf": "111111111",
@@ -70,9 +70,9 @@ For  anywhere other request, put in headrs the Key Authorization with the Token 
     "cidade": "Itaberaí",
     "estado": "São Paulo",
     "endereco": "teste"
-}
+}</p>
 
 - Delete:http://localhost:3333/customer/{id}
 
-* route to delete customer
-* {id} is id created by mongodb
+<p>route to delete customer</p>
+<p>{id} is id created by mongodb</p>
