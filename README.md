@@ -47,8 +47,8 @@ For  anywhere other request, put in headrs the Key Authorization with the Token 
 
 - Post:http://localhost:3333/customers
 
-* Route to create customer
-* json example: {
+-> Route to create customer
+-> json example: {
     "name": "Joao figueredo da Silva",
     "email": "joaofigueredo@gmail.com",
     "cpf": "111111111",
@@ -60,9 +60,9 @@ For  anywhere other request, put in headrs the Key Authorization with the Token 
 
 - Put:http://localhost:3333/customer/{id}
 
-* route to update customer
-* {id} is id created by mongodb
-* json example: {
+-> route to update customer
+-> {id} is id created by mongodb
+-> json example: {
     "name": "Joao figueredo da Silva",
     "email": "joaofigueredo@gmail.com",
     "cpf": "111111111",
