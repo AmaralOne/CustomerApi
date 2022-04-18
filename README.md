@@ -8,7 +8,7 @@
 
 This Api manages Customer.
 
-But, first authenticate with the Api.
+But, first authenticate with the Api:
 
 
 
