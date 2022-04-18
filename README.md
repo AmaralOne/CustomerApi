@@ -4,11 +4,13 @@
 
 ## I'm Flávio Amaral!
 
+<p>This API was developed in Node.js with Typscript. Using the Express framework. MongoDb Local was used as the database to persist  the datas.</p>
+
 This Api manages Customer.
 
 But, first authenticate with the Api.
 
-<p>This API was developed in Node.js with Typscript. Using the Express framework. MongoDb Local was used as the database to persist  the datas.</p>
+
 
 - Create a new Customer with this url (http://localhost:3333/auth/register) with a json object as
 {
