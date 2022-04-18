@@ -4,7 +4,7 @@
 
 ## I'm Flávio Amaral!
 
-<p>This API was developed in Node.js with Typscript. Using the Express framework. MongoDb Local was used as the database to persist  the datas.</p>
+<p>This API was developed in Node.js with Typscript, using the Express framework and MongoDb Local was used as the database to persist  the data.</p>
 
 This Api manages Customer.
 
@@ -26,7 +26,7 @@ But, first authenticate with the Api:
 }
 
 The request return the Token that will be used to authenticate in other requests.
-For  anywhere other request, put in headrs the Key Authorization with the Bearer + Token returned.
+For  anywhere other request, put in Header the Key Authorization with the Bearer + Token returned.
 
 ## Request of Api Customer:
 
