@@ -8,6 +8,8 @@ This Api manages Customer.
 
 But, first authenticate with the Api.
 
+<p>This API was developed in Node.js with Typscript. Using the Express framework. MongoDb Local was used as the database to persist  the datas.</p>
+
 - Create a new Customer with this url (http://localhost:3333/auth/register) with a json object as
 {
     "name": "teste2",
@@ -22,7 +24,7 @@ But, first authenticate with the Api.
 }
 
 The request return the Token that will be used to authenticate in other requests.
-For  anywhere other request, put in headrs the Key Authorization with the Token returned.
+For  anywhere other request, put in headrs the Key Authorization with the Bearer + Token returned.
 
 ## Request of Api Customer:
 
